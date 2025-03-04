@@ -1,0 +1,214 @@
+
+*{
+    font-family: "Caveat", serif;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: antiquewhite;
+}
+
+/*header*/
+h1{
+    text-align: center;
+    text-decoration: solid;
+    text-transform: uppercase;
+    color: rgb(18, 145, 138);
+    font-size: 2.5rem;
+    padding: 1rem;
+}
+
+.imagen-principal {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    border-radius: 5px;
+    display: block;
+    
+}
+
+.links-pages {
+    color: rgb(18, 145, 138);
+    display: flex;
+    list-style: none;
+    font-size: 1.4rem;
+    gap: 35px;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+a:visited {
+    color: rgb(18, 145, 138);
+}
+
+.preguntas{
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    list-style: none;
+}
+
+.respuesta{
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.contenedor{
+    background-color: rgba(18, 145, 139, 0.068);
+    padding: 20px;
+}
+
+p{
+    font-size: 1.35rem;
+}
+
+/*main*/
+
+h3{
+    text-decoration: underline;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+h4{
+    font-size: 1.35rem;
+}
+
+.frase{
+    font-size: 1.35rem;
+}
+
+.ver-mas{
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    margin-top: 1rem;
+}    
+
+.preparacion-recetas{
+    font-size: 1.25rem;
+}
+
+.fondo-recetas{
+    background-color: rgba(250, 215, 227, 0.486);
+}
+
+.padding-box {
+    padding: 20px;
+    background-color: rgba(250, 215, 227, 0.486);
+}
+
+.cuadros-texto{
+    border-radius: 5px;
+}
+
+textarea{
+    border-radius: 5px;
+}
+
+.cuadro-receta {
+    width: 30%; 
+    background-color: rgba(250, 215, 227, 0.486);
+    border: 2px dashed rgb(18, 145, 138);
+    padding: 2%; 
+}
+
+/* Bootstrap index */
+
+.card-group .card {
+    margin-right: 3rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    margin-left: 3rem;
+    text-align: center;
+    border-radius: 10px;
+    background-color: antiquewhite;
+    border-color: antiquewhite;
+}
+
+.card img {
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+}   
+
+.card-title{
+    text-decoration: underline;
+}
+
+/*footer*/
+
+.copyright {
+    text-align: center;
+}
+
+/* media queries */
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .imagen-principal {
+        max-width: 80%; 
+        margin-top: 20px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .card-group {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    p, .preguntas, .respuesta {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 800px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .card-group {
+        gap: 30px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .card {
+        width: 22rem; 
+    }
+
+    .imagen-principal {
+        max-width: 300px;
+        margin-top: 2rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    p, .preguntas, .respuesta {
+        font-size: 1.5rem;
+    }
+}
