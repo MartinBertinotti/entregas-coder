@@ -9,6 +9,10 @@ body {
     background-color: antiquewhite;
 }
 
+hr{
+    color: rgb(18, 145, 138);
+}
+
 /* header */
 h1 {
     text-align: center;
@@ -302,4 +306,35 @@ textarea {
     p, .preguntas, .respuesta {
         font-size: 1.1rem;
     }
+}
+
+
+/* hoja recetas */
+
+/*carrusel */
+
+#carouselExampleAutoplaying .carousel-inner img {
+    width: 30%;
+    margin: 0 auto; 
+}
+
+#carouselExampleAutoplaying {
+    width: 30%;
+    margin: 0 auto; 
+}
+
+/* acordion */
+
+.accordion-item {
+    background-color: rgba(250, 235, 215, 0.123);
+    border-style: groove;
+}
+
+.accordion-button {
+    color: rgb(18, 145, 138);
+    border-color: rgb(18, 145, 138);
+    background-color: rgba(18, 145, 139, 0.062);;
+}
+.accordion-button:hover {
+    background-color: antiquewhite;
 }
