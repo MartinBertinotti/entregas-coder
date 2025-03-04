@@ -1,16 +1,16 @@
-
-*{
+* {
     font-family: "Caveat", serif;
     text-decoration: none;
     margin: 0;
     padding: 0;
 }
-body{
+
+body {
     background-color: antiquewhite;
 }
 
-/*header*/
-h1{
+/* header */
+h1 {
     text-align: center;
     text-decoration: solid;
     text-transform: uppercase;
@@ -19,6 +19,7 @@ h1{
     padding: 1rem;
 }
 
+/* en principio, la imagen principal iba al lado de la nav bar, a la derecha de la pagina, pero al hacerlo responsive no pude hacer que quede todo igual, por lo que decidi por ahora dejarla asi arriba de los links, y voy a intentar encontrarle la vuelta */
 .imagen-principal {
     position: relative;
     width: 100%;
@@ -26,7 +27,6 @@ h1{
     margin: 0 auto;
     border-radius: 5px;
     display: block;
-    
 }
 
 .links-pages {
@@ -43,56 +43,55 @@ a:visited {
     color: rgb(18, 145, 138);
 }
 
-.preguntas{
+.preguntas {
     font-size: 1.5rem;
     margin: 1rem 0;
     list-style: none;
 }
 
-.respuesta{
+.respuesta {
     font-size: 1.5rem;
     text-align: center;
     margin: 1rem 0;
 }
 
-.contenedor{
+.contenedor {
     background-color: rgba(18, 145, 139, 0.068);
     padding: 20px;
 }
 
-p{
+p {
     font-size: 1.35rem;
 }
 
-/*main*/
-
-h3{
+/* main */
+h3 {
     text-decoration: underline;
     font-size: 1.5rem;
     text-align: center;
 }
 
-h4{
+h4 {
     font-size: 1.35rem;
 }
 
-.frase{
+.frase {
     font-size: 1.35rem;
 }
 
-.ver-mas{
+.ver-mas {
     font-size: 1.25rem;
     font-weight: bold;
     text-align: center;
     display: block;
     margin-top: 1rem;
-}    
+}
 
-.preparacion-recetas{
+.preparacion-recetas {
     font-size: 1.25rem;
 }
 
-.fondo-recetas{
+.fondo-recetas {
     background-color: rgba(250, 215, 227, 0.486);
 }
 
@@ -101,23 +100,22 @@ h4{
     background-color: rgba(250, 215, 227, 0.486);
 }
 
-.cuadros-texto{
+.cuadros-texto {
     border-radius: 5px;
 }
 
-textarea{
+textarea {
     border-radius: 5px;
 }
 
 .cuadro-receta {
-    width: 30%; 
+    width: 30%;
     background-color: rgba(250, 215, 227, 0.486);
     border: 2px dashed rgb(18, 145, 138);
-    padding: 2%; 
+    padding: 2%;
 }
 
 /* Bootstrap index */
-
 .card-group .card {
     margin-right: 3rem;
     margin-top: 5rem;
@@ -134,19 +132,20 @@ textarea{
     overflow: hidden;
     width: 100%;
     height: auto;
-}   
+}
 
-.card-title{
+.card-title {
     text-decoration: underline;
 }
 
-/*footer*/
-
+/* footer */
 .copyright {
     text-align: center;
 }
 
 /* media queries */
+
+/* pantalla chica */
 
 @media (max-width: 480px) {
     h1 {
@@ -154,8 +153,19 @@ textarea{
     }
 
     .imagen-principal {
-        max-width: 80%; 
+        max-width: 70%;
         margin-top: 20px;
+    }
+
+    .links-pages {
+        flex-direction: column; 
+        gap: 10px; 
+        justify-content: center;
+    }
+
+    .links-pages a {
+        font-size: 1.2rem; 
+        text-align: center;
     }
 
     nav ul li {
@@ -184,6 +194,50 @@ textarea{
     }
 }
 
+/* pantalla mediana */
+
+@media (min-width: 400px) and (max-width: 799px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .imagen-principal {
+        max-width: 60%; 
+        margin-top: 20px;
+    }
+
+    .links-pages {
+        flex-direction: row; 
+        gap: 20px; 
+    }
+
+    .links-pages a {
+        font-size: 1.3rem; 
+    }
+
+    .card-group {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .card {
+        width: 45%;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    p, .preguntas, .respuesta {
+        font-size: 1.3rem;
+    }
+}
+
+
+
+/* pantalla grande*/
 @media (min-width: 800px) {
     h1 {
         font-size: 3rem;
@@ -196,7 +250,7 @@ textarea{
     }
 
     .card {
-        width: 22rem; 
+        width: 22rem;
     }
 
     .imagen-principal {
@@ -210,5 +264,42 @@ textarea{
 
     p, .preguntas, .respuesta {
         font-size: 1.5rem;
+    }
+}
+
+/* pantalla mas chica // no me estan quedando bien los links cuando achico, como que la O de contactO se parte la mitad */
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1.8rem; 
+    }
+
+    .imagen-principal {
+        max-width: 40%;
+        margin-top: 20px;
+    }
+
+    .links-pages {
+        flex-direction:row;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .links-pages a {
+        font-size: 1rem;
+    }
+
+    .card-group {
+        flex-direction: column;
+        gap: 7px;
+        align-items: center;
+    }
+
+    .card {
+        width: 70%; 
+        margin-bottom: 7px;
+    }
+
+    p, .preguntas, .respuesta {
+        font-size: 1.1rem;
     }
 }
