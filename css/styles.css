@@ -1,0 +1,354 @@
+@charset "UTF-8";
+/* Pantalla chica (menos de 480px) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  .imagen-principal {
+    max-width: 70%;
+    margin-top: 20px;
+  }
+  .links-pages {
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+  }
+  .links-pages a {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .card-group {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .card {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+  p, .preguntas, .respuesta {
+    font-size: 1.2rem;
+  }
+}
+/* Pantalla mediana (entre 400px y 799px) */
+@media (min-width: 400px) and (max-width: 799px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+  .imagen-principal {
+    max-width: 60%;
+    margin-top: 20px;
+  }
+  .links-pages {
+    flex-direction: row;
+    gap: 20px;
+  }
+  .links-pages a {
+    font-size: 1.3rem;
+  }
+  .card-group {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+  .card {
+    width: 45%;
+    margin-bottom: 20px;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  p, .preguntas, .respuesta {
+    font-size: 1.3rem;
+  }
+}
+/* Pantalla grande (más de 800px) */
+@media (min-width: 800px) {
+  h1 {
+    font-size: 3rem;
+  }
+  .card-group {
+    gap: 30px;
+    display: flex;
+    justify-content: center;
+  }
+  .card {
+    width: 22rem;
+  }
+  .imagen-principal {
+    max-width: 300px;
+    margin-top: 2rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  p, .preguntas, .respuesta {
+    font-size: 1.5rem;
+  }
+}
+/* Pantalla más chica (menos de 400px) */
+@media (max-width: 400px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  .imagen-principal {
+    max-width: 40%;
+    margin-top: 20px;
+  }
+  .links-pages {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+  .links-pages a {
+    font-size: 1rem;
+  }
+  .card-group {
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+  }
+  .card {
+    width: 70%;
+    margin-bottom: 7px;
+  }
+  p, .preguntas, .respuesta {
+    font-size: 1.1rem;
+  }
+}
+/* Media queries adicionales para la hoja de recetas */
+#carouselExampleAutoplaying .carousel-inner img {
+  width: 30%;
+  margin: 0 auto;
+}
+
+#carouselExampleAutoplaying {
+  width: 30%;
+  margin: 0 auto;
+}
+
+* {
+  font-family: "Caveat", serif;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: antiquewhite;
+}
+
+hr {
+  color: rgb(18, 145, 138);
+}
+
+/* header */
+h1 {
+  text-align: center;
+  text-decoration: solid;
+  text-transform: uppercase;
+  color: rgb(18, 145, 138);
+  font-size: 2.5rem;
+  padding: 1rem;
+}
+
+.imagen-principal {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  border-radius: 5px;
+  display: block;
+}
+
+.links-pages {
+  color: rgb(18, 145, 138);
+  display: flex;
+  list-style: none;
+  font-size: 1.4rem;
+  gap: 35px;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+a:visited {
+  color: rgb(18, 145, 138);
+}
+
+.preguntas {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  list-style: none;
+}
+
+.respuesta {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.contenedor {
+  background-color: rgba(18, 145, 139, 0.068);
+  padding: 20px;
+}
+
+p {
+  font-size: 1.35rem;
+}
+
+/* main */
+h3 {
+  text-decoration: underline;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+h4 {
+  font-size: 1.35rem;
+}
+
+.frase {
+  font-size: 1.35rem;
+}
+
+.ver-mas {
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  margin-top: 1rem;
+}
+
+.preparacion-recetas {
+  font-size: 1.25rem;
+}
+
+.fondo-recetas {
+  background-color: rgba(250, 215, 227, 0.486);
+}
+
+.padding-box {
+  padding: 20px;
+  background-color: rgba(250, 215, 227, 0.486);
+}
+
+.cuadros-texto {
+  border-radius: 5px;
+}
+
+textarea {
+  border-radius: 5px;
+}
+
+.cuadro-receta {
+  width: 30%;
+  background-color: rgba(250, 215, 227, 0.486);
+  border: 2px dashed rgb(18, 145, 138);
+  padding: 2%;
+}
+
+/* Bootstrap index */
+.card-group .card {
+  margin-right: 3rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  margin-left: 3rem;
+  text-align: center;
+  border-radius: 10px;
+  background-color: antiquewhite;
+  border-color: antiquewhite;
+}
+
+.card img {
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+}
+
+.card-title {
+  text-decoration: underline;
+}
+
+/* footer */
+.copyright {
+  text-align: center;
+}
+
+/* Hoja contacto */
+.padding-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+}
+
+.campo.mensaje {
+  width: 97%;
+}
+
+.cuadros-texto {
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+
+textarea {
+  width: 100%;
+}
+
+.enviar {
+  width: auto;
+  padding: 5px 15px;
+  margin-left: auto;
+  margin-top: 20px;
+  background-color: rgba(250, 215, 227, 0.486);
+  color: black;
+  border-color: rgb(18, 145, 138);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.enviar:hover {
+  background-color: rgb(18, 145, 138);
+}
+
+/* Animación en footer página sobre-mi */
+footer {
+  background-color: rgba(18, 145, 139, 0.068);
+  color: rgba(18, 145, 139, 0.068);
+  text-align: center;
+  padding: 20px 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+footer .copyright {
+  margin: 0;
+}
+
+footer sub {
+  font-size: 14px;
+  color: rgb(18, 145, 138);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

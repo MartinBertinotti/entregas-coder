@@ -1,0 +1,156 @@
+// _mediaQueries.scss
+
+/* Pantalla chica (menos de 480px) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .imagen-principal {
+        max-width: 70%;
+        margin-top: 20px;
+    }
+
+    .links-pages {
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .links-pages a {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .card-group {
+        @include flexAlignGap(column, center, 20px);
+    }
+
+    .card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    p, .preguntas, .respuesta {
+        font-size: 1.2rem;
+    }
+}
+
+/* Pantalla mediana (entre 400px y 799px) */
+@media (min-width: 400px) and (max-width: 799px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .imagen-principal {
+        max-width: 60%;
+        margin-top: 20px;
+    }
+
+    .links-pages {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .links-pages a {
+        font-size: 1.3rem;
+    }
+
+    .card-group {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .card {
+        width: 45%;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    p, .preguntas, .respuesta {
+        font-size: 1.3rem;
+    }
+}
+
+/* Pantalla grande (más de 800px) */
+@media (min-width: 800px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .card-group {
+        gap: 30px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .card {
+        width: 22rem;
+    }
+
+    .imagen-principal {
+        max-width: 300px;
+        margin-top: 2rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    p, .preguntas, .respuesta {
+        font-size: 1.5rem;
+    }
+}
+
+/* Pantalla más chica (menos de 400px) */
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .imagen-principal {
+        max-width: 40%;
+        margin-top: 20px;
+    }
+
+    .links-pages {
+        @include flexAlignGap(row, center, 10px);
+    }
+
+    .links-pages a {
+        font-size: 1rem;
+    }
+
+    .card-group {
+        @include flexAlignGap(column, center, 7px);
+    }
+
+    .card {
+        width: 70%;
+        margin-bottom: 7px;
+    }
+
+    p, .preguntas, .respuesta {
+        font-size: 1.1rem;
+    }
+}
+
+/* Media queries adicionales para la hoja de recetas */
+
+#carouselExampleAutoplaying .carousel-inner img {
+    width: 30%;
+    margin: 0 auto;
+}
+
+#carouselExampleAutoplaying {
+    width: 30%;
+    margin: 0 auto;
+}

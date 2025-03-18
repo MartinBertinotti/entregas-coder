@@ -1,0 +1,223 @@
+// _resto.scss
+
+* {
+  font-family: "Caveat", serif;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $colorBodyPrincipal;
+}
+
+hr {
+  color: $colorFontPrincipal;
+}
+
+/* header */
+h1 {
+  text-align: center;
+  text-decoration: solid;
+  text-transform: uppercase;
+  color: $colorFontPrincipal;
+  font-size: 2.5rem;
+  padding: 1rem;
+}
+
+.imagen-principal {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  border-radius: 5px;
+  display: block;
+}
+
+.links-pages {
+  color: $colorFontPrincipal;
+  display: flex;
+  list-style: none;
+  font-size: 1.4rem;
+  gap: 35px;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+a:visited {
+  color: $colorFontPrincipal;
+}
+
+.preguntas {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  list-style: none;
+}
+
+.respuesta {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.contenedor {
+  background-color: $colorBackgroundPrincipal;
+  padding: 20px;
+}
+
+p {
+  font-size: 1.35rem;
+}
+
+/* main */
+h3 {
+  text-decoration: underline;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+h4 {
+  font-size: 1.35rem;
+}
+
+.frase {
+  font-size: 1.35rem;
+}
+
+.ver-mas {
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  margin-top: 1rem;
+}
+
+.preparacion-recetas {
+  font-size: 1.25rem;
+}
+
+.fondo-recetas {
+  background-color: $colorBackgroundSecundario;
+}
+
+.padding-box {
+  padding: 20px;
+  background-color: $colorBackgroundSecundario;
+}
+
+.cuadros-texto {
+  border-radius: 5px;
+}
+
+textarea {
+  border-radius: 5px;
+}
+
+.cuadro-receta {
+  width: 30%;
+  background-color: $colorBackgroundSecundario;
+  border: 2px dashed $colorFontPrincipal;
+  padding: 2%;
+}
+
+/* Bootstrap index */
+.card-group .card {
+  margin-right: 3rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  margin-left: 3rem;
+  text-align: center;
+  border-radius: 10px;
+  background-color: $colorBodyPrincipal;
+  border-color: $colorBodyPrincipal;
+}
+
+.card img {
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+}
+
+.card-title {
+  text-decoration: underline;
+}
+
+/* footer */
+.copyright {
+  text-align: center;
+}
+
+/* Hoja contacto */
+
+.padding-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+}
+
+.campo.mensaje {
+  width: 97%;
+}
+
+.cuadros-texto {
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+
+textarea {
+  width: 100%;
+}
+
+.enviar {
+  width: auto;
+  padding: 5px 15px;
+  margin-left: auto;
+  margin-top: 20px;
+  background-color: $colorBackgroundSecundario;
+  color: black;
+  border-color: $colorFontPrincipal;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.enviar:hover {
+  background-color: $colorFontPrincipal;
+}
+
+/* Animación en footer página sobre-mi */
+footer {
+  background-color: $colorBackgroundPrincipal;
+  color: $colorBackgroundPrincipal;
+  text-align: center;
+  padding: 20px 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+footer .copyright {
+  margin: 0;
+}
+
+footer sub {
+  font-size: 14px;
+  color: $colorFontPrincipal;
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}

@@ -1,3 +1,15 @@
+@mixin flexAlignGap ($flexValor,$alignValor,$gapValor) {
+    flex-direction: $flexValor;
+    align-items: $alignValor;
+    gap: $gapValor 
+    }
+
+    $colorBodyPrincipal: antiquewhite;
+    $colorFontPrincipal: rgb(18, 145, 138);
+    $colorBackgroundPrincipal: (18, 145, 139, 0.068);
+    $colorBackgroundSecundario: (250, 215, 227, 0.486);
+
+
 * {
     font-family: "Caveat", serif;
     text-decoration: none;
@@ -6,11 +18,11 @@
 }
 
 body {
-    background-color: antiquewhite;
+    background-color: $colorBodyPrincipal;
 }
 
 hr{
-    color: rgb(18, 145, 138);
+    color: $colorFontPrincipal;
 }
 
 /* header */
@@ -18,7 +30,7 @@ h1 {
     text-align: center;
     text-decoration: solid;
     text-transform: uppercase;
-    color: rgb(18, 145, 138);
+    color: $colorFontPrincipal;
     font-size: 2.5rem;
     padding: 1rem;
 }
@@ -33,7 +45,7 @@ h1 {
 }
 
 .links-pages {
-    color: rgb(18, 145, 138);
+    color: $colorFontPrincipal;
     display: flex;
     list-style: none;
     font-size: 1.4rem;
@@ -43,7 +55,7 @@ h1 {
 }
 
 a:visited {
-    color: rgb(18, 145, 138);
+    color: $colorFontPrincipal;
 }
 
 .preguntas {
@@ -59,7 +71,7 @@ a:visited {
 }
 
 .contenedor {
-    background-color: rgba(18, 145, 139, 0.068);
+    background-color: $colorBackgroundPrincipal;
     padding: 20px;
 }
 
@@ -95,12 +107,12 @@ h4 {
 }
 
 .fondo-recetas {
-    background-color: rgba(250, 215, 227, 0.486);
+    background-color: $colorBackgroundSecundario;
 }
 
 .padding-box {
     padding: 20px;
-    background-color: rgba(250, 215, 227, 0.486);
+    background-color: $colorBackgroundSecundario;
 }
 
 .cuadros-texto {
@@ -113,8 +125,8 @@ textarea {
 
 .cuadro-receta {
     width: 30%;
-    background-color: rgba(250, 215, 227, 0.486);
-    border: 2px dashed rgb(18, 145, 138);
+    background-color: $colorBackgroundSecundario;
+    border: 2px dashed $colorFontPrincipal;
     padding: 2%;
 }
 
@@ -126,8 +138,8 @@ textarea {
     margin-left: 3rem;
     text-align: center;
     border-radius: 10px;
-    background-color: antiquewhite;
-    border-color: antiquewhite;
+    background-color: $colorBodyPrincipal;
+    border-color: $colorBodyPrincipal;
 }
 
 .card img {
@@ -178,9 +190,7 @@ textarea {
     }
 
     .card-group {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
+        @include flexAlignGap(column,center,20px);
     }
 
     .card {
@@ -280,9 +290,7 @@ textarea {
     }
 
     .links-pages {
-        flex-direction:row;
-        gap: 10px;
-        align-items: center;
+        @include flexAlignGap(row,center,10px);
     }
 
     .links-pages a {
@@ -290,9 +298,7 @@ textarea {
     }
 
     .card-group {
-        flex-direction: column;
-        gap: 7px;
-        align-items: center;
+        @include flexAlignGap(column,center,7px);
     }
 
     .card {
@@ -322,17 +328,17 @@ textarea {
 /* acordion */
 
 .accordion-item {
-    background-color: rgba(250, 235, 215, 0.123);
+    background-color: $colorBackgroundSecundario;
     border-style: groove;
 }
 
 .accordion-button {
-    color: rgb(18, 145, 138);
-    border-color: rgb(18, 145, 138);
-    background-color: rgba(18, 145, 139, 0.062);;
+    color: $colorFontPrincipal;
+    border-color: $colorFontPrincipal;
+    background-color: $colorBackgroundPrincipal;
 }
 .accordion-button:hover {
-    background-color: antiquewhite;
+    background-color: $colorBodyPrincipal;
 }
 
 /* hoja contacto */
@@ -365,21 +371,54 @@ textarea {
   
   .enviar {
     width: auto;
-    padding: 5px 15px; 
-    margin-left: auto; 
-    margin-top: 20px; 
-    background-color: rgba(18, 145, 139, 0.925);
-    color: white;
-    border: none;
+    padding: 5px 15px;
+    margin-left: auto;
+    margin-top: 20px;
+    background-color: $colorBackgroundSecundario;
+    color: black;
+    border-color: $colorFontPrincipal;
     border-radius: 5px;
     cursor: pointer;
   }
   
   .enviar:hover {
-    background-color:  rgb(20, 212, 203);
-  
+    background-color: $colorFontPrincipal;
+  }
+
   @media (max-width: 768px) {
     .campo {
       width: 100%; 
     }
   }
+
+  /* animacion en footer pagina sobre-mi */
+
+footer {
+    background-color: $colorBackgroundPrincipal;
+    color: $colorBackgroundPrincipal;
+    text-align: center;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+  }
+  
+  footer .copyright {
+    margin: 0;
+  }
+  
+  footer sub {
+    font-size: 14px;
+    color: $colorFontPrincipal;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
